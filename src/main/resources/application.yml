@@ -1,0 +1,24 @@
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/springbootbook?characterEncoding=utf8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: 940328
+  data:
+    redis:
+      host: 172.24.30.181
+      port: 6379
+      connect-timeout: 1000
+      jedis:
+        pool:
+          min-idle: 5
+          max-active: 10
+          max-idle: 10
+          max-wait: 2000
+
+mybatis:
+  #  mapper映射文件包扫描 (这里是对应 resources 的文件路径)
+  mapper-locations: classpath:/mapper/*.xml
+  #  实体类别名包扫描
+  type-aliases-package: com.yun.pojo
